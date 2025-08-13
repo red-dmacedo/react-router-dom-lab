@@ -22,10 +22,10 @@ const MailboxForm = (props) => {
 
   return (
     <main>
-      <h2>Create a New Mailbox</h2>
+      <h2>New Mailbox</h2>
       <form onSubmit={evtHandleSubmit}>
-        <div className="input-line">
-          <label htmlFor="boxOwner">Name:</label>
+        {/* <div className="input-line"> */}
+          <label htmlFor="boxOwner">Enter a Boxholder:</label>
           <input
             type="text"
             id="boxOwner"
@@ -33,16 +33,16 @@ const MailboxForm = (props) => {
             value={formData.boxOwner}
             onChange={evtHandleChange}
           />
-        </div>
-        <div>
-          <label htmlFor="boxSize">Mailbox Size:</label>
+        {/* </div> */}
+        {/* <div> */}
+          <label htmlFor="boxSize">Select a Box Size:</label>
           <select name="boxSize" id="boxSize" onChange={evtHandleChange}>
             <option value="Small">Small</option>
             <option value="Medium">Medium</option>
             <option value="Large">Large</option>
           </select>
-        </div>
-        <button type="button" onClick={() => addMailbox()}>Add</button>
+        {/* </div> */}
+        <button type="submit">Submit</button>
       </form>
     </main>
   );

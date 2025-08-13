@@ -1,13 +1,13 @@
-// function requiredParam(paramName) {
-//   throw new Error(`Parameter '${paramName}' is required.`);
-// }
-
 class Mailbox {
-  constructor(inputObject = {}) {
-    const { _id, boxSize, boxOwner } = inputObject;
+  constructor(_id, boxSize, boxOwner) {
     this._id = _id || 0;
     this.boxSize = boxSize || 'Small';
     this.boxOwner = boxOwner || '';
+  };
+
+  static from(obj = {}) {
+    const { _id, boxSize, boxOwner } = obj;
+    return new Mailbox(_id, boxSize, boxOwner);
   };
 
   /* This is an example of validating the variable before setting it:
