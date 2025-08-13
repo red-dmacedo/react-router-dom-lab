@@ -1,5 +1,17 @@
 $default-gap: 10px
+$item-background-color: #000000ff
+$hover-color: #242424ff
+
+.nav
+  background-color: $item-background-color
+  border-radius: 5px
 
 .nav-list
   display: flex
   gap: $default-gap
+  margin: 10px
+
+.nav-item
+  margin: 10px
+  &:hover
+    background-color: $hover-color
