@@ -9,7 +9,7 @@ const MailboxList = (props) => {
     <ul className='center list'>
       {mailboxes.map((box) => (
         <li key={box._id} className='mail-card'>
-          <Link to={`/mailboxes/${box._id}`}>Mailbox {box._id}</Link>
+          <Link to={`/mailboxes/${box._id}`} className='color-red'>Mailbox {box._id}</Link>
         </li>
       ))}
     </ul>
